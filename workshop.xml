@@ -1,0 +1,8 @@
+<Mod
+    name="Bountiful Basins"
+    tags="gameplay,alchemy,tweaks,cheats"
+    dont_upload_folders=".git|.vscode"
+    dont_upload_files=".gitignore|workshop_preview_image.png.kra|README.md|percents.lua"
+    description=""
+>
+</Mod>
