@@ -59,9 +59,8 @@ DEFAULT_WEIGHTS = {
 	-- ["magic_liquid"] = 0, -- evaporates
 
 	-- harmful non-magical liquids
-	["acid"] = 25, -- can anger gods. no worse than vanilla worms
+	["acid"] = 25,    -- can anger gods. no worse than vanilla worms
 	["blood_cold"] = 1, -- evaporates into freezing vapor, quite dangerous
-	["creepy_liquid"] = 1, -- extremely low chance because it fills the entire floor
 	["cursed_liquid"] = 25,
 	["just_death"] = 10, -- evaporates...but it would be really funny if someone got there in time
 	["liquid_fire_weak"] = 30,
@@ -117,7 +116,7 @@ UNUSED_MATERIALS = {
 IGNORED_MATERIALS = {
 	["blood_fading_slow"] = true,   -- seems pointless with regular blood?
 	["cloth_box2d"] = true, 	    -- missing name string, spams errors with options menu open
-	["gem_box2d_white"] = true ,    -- same as above
+	["gem_box2d_white"] = true,     -- same as above
 	["metal_nohit_molten"] = true,  -- basically a duplicate of metal_prop_molten but for light fixtures?
 	["metal_molten"] = true,        -- same as above, but unused?
 	["plastic_grey_molten"] = true, -- missing generated material_icons for some reason
@@ -129,4 +128,6 @@ IGNORED_MATERIALS = {
 	["steel_rust_molten"] = true,   -- less interesting version
 	["water_fading"] = true,        -- evaporable but no evaporable tag (because it doesn't create anything?)
 	["water_temp"] = true,          -- duplicate of water_fading?
+	["orb_powder"] = true,          -- burns away
+	["creepy_liquid"] = true,       -- just disappears
 }
