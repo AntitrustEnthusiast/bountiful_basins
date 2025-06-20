@@ -16,6 +16,12 @@ for i = 0, ModSettingGetCount() - 1, 1 do
         end
     end
 end
+-- edge case where no weights are set at all
+if #BASIN_MATERIALS == 0 then
+    print("ALL BASIN WEIGHTS WERE ZERO, ADDING HARDCODED AIR")
+    BASIN_MATERIALS[1] = "air"
+    basin_weights[1] = 1
+end
 
 WEIGHTED = ld.new_die(basin_weights)
 BASIN_EMPTY_CHANCE = ModSettingGet("bountiful_basins.empty_chance")

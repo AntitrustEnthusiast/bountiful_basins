@@ -23,8 +23,6 @@ Note: This mod's directory must be named `bountiful_basins`, so rename it if it 
 ## Compatibility
 This mod should detect modded materials and add them to the weighted pool. All modded materials will start with a weight of 0 and must be manually configured.
 
-This mod should be compatible with anything that doesn't overwrite `data/scripts/biomes/temple_altar_top_shared.lua`. The file only contains the function used to spawn these basins, so chance of a conflict is low.
-
 ## License
 All original parts of this software are released under the [MIT license](LICENSE.md). A non-exhaustive list of exceptions follows:
 * Everything in the `lib/` directory retains the original licenses they were released under, they are only packaged here for convenience
