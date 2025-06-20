@@ -9,7 +9,7 @@ for i = 0, ModSettingGetCount() - 1, 1 do
     if value ~= 0 and tostring(name):find("^bountiful_basins.weight_") ~= nil then
         -- validate material actually exists, in case user removed mods after setting weights
         local material = name:gsub("bountiful_basins.weight_", "")
-        if pcall(CellFactory_GetType, material) then
+        if CellFactory_GetType(material) ~= -1 then
             BASIN_MATERIALS[count] = material
             basin_weights[count] = value
             count = count + 1
