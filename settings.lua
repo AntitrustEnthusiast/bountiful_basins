@@ -3,9 +3,6 @@ dofile_once("data/scripts/lib/mod_settings.lua")
 
 local mod_id = "bountiful_basins"
 
--- load default weights, unused materials, and ignored materials
-dofile_once("mods/" .. mod_id .. "/materials.lua")
-
 local prefix = "weight_"
 local setting_prefix = mod_id .. "." .. prefix
 local find_pattern = "^" .. setting_prefix
@@ -126,7 +123,7 @@ local function reset_to_default()
 	for i = 0, ModSettingGetCount() - 1, 1 do
 		local name, _, _ = ModSettingGetAtIndex(i)
 		if tostring(name):find(find_pattern) ~= nil then
-			local material = string.sub(name, #setting_prefix+1)
+			local material = string.sub(name, #setting_prefix + 1)
 			local default = DEFAULT_WEIGHTS[material] or 0
 			ModSettingSetNextValue(name, default, false)
 		end
@@ -166,6 +163,8 @@ end
 -- crashes if called in main menu, materials must be loaded to call CellFactory_* methods
 local function fill_settings()
 	if filled then return end
+	-- load default weights, unused materials, and ignored materials
+	dofile_once("mods/" .. mod_id .. "/materials.lua")
 	filled = true
 	for _, name in pairs(CellFactory_GetAllLiquids(false, false)) do
 		add_material(name)
@@ -210,11 +209,11 @@ function ModSettingsGui(gui, in_main_menu)
 	if not in_main_menu then
 		mod_settings[3]["hidden"] = true
 		fill_settings()
+		if GuiButton(gui, 1891292, mod_setting_group_x_offset, 0, "[Reset to defaults]") then
+			reset_to_default()
+		end
 	else
 		mod_settings[3]["hidden"] = false
-	end
-	if GuiButton(gui, 1891292, mod_setting_group_x_offset, 0, "[Reset to defaults]") then
-		reset_to_default()
 	end
 	mod_settings_gui(mod_id, mod_settings, gui, in_main_menu)
 end
