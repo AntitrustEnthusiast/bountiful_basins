@@ -59,16 +59,13 @@ DEFAULT_WEIGHTS = {
 	-- ["magic_liquid"] = 0, -- evaporates
 
 	-- harmful non-magical liquids
-	["acid"] = 25,    -- can anger gods. no worse than vanilla worms
+	["acid"] = 15,    -- can anger gods. no worse than vanilla worms
 	["blood_cold"] = 1, -- evaporates into freezing vapor, quite dangerous
 	["cursed_liquid"] = 25,
-	["just_death"] = 10, -- evaporates...but it would be really funny if someone got there in time
 	["liquid_fire_weak"] = 30,
 	["liquid_fire"] = 20,
 	["material_darkness"] = 25,
-	-- ["poison"] = 0, -- evaporates but no tag...
 	["pus"] = 25,
-	["void_liquid"] = 1, -- extremely low chance because it can anger gods.
 
 	-- molten
 	["aluminium_molten"] = 10,
@@ -130,4 +127,7 @@ IGNORED_MATERIALS = {
 	["water_temp"] = true,          -- duplicate of water_fading?
 	["orb_powder"] = true,          -- burns away
 	["creepy_liquid"] = true,       -- just disappears
+	["just_death"] = true,		    -- it would be really funny, but even instant teleport isn't fast enough
+	["void_liquid"] = true, 		-- just disappears
+	["poison"] = true, 				-- evaporates but no tag
 }
