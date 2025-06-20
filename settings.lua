@@ -57,7 +57,8 @@ Setting too low might make some seeds very difficult.]],
 		ui_description =
 		[[Show sliders for additional material categories. Off by default to avoid bogging down the menu.
 Note: hidden materials default to 0 weight, you will need to increase them manually.
-Note: weights still apply if these settings are hidden. \nManually set to 0 before hiding or use [reset] button above if not desired.]],
+Note: weights still apply if these settings are hidden.
+Manually set to 0 before hiding or use [reset] button above if not desired.]],
 		foldable = true,
 		_folded = true,
 		settings = {
