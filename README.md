@@ -26,4 +26,3 @@ This mod should detect modded materials and add them to the weighted pool. All m
 ## License
 All original parts of this software are released under the [MIT license](LICENSE.md). A non-exhaustive list of exceptions follows:
 * Everything in the `lib/` directory retains the original licenses they were released under, they are only packaged here for convenience
-* Nolla Games retains all rights to any portions of the file `data/scripts/biomes/temple_altar_top_shared.lua` not created for this mod
