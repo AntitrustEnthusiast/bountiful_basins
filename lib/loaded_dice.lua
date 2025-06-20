@@ -1,3 +1,4 @@
+-- based on https://github.com/a13X-B/loaded_dice/blob/main/loaded_dice.lua
 local ld_api = {}
 
 function ld_api.add(d,w)
@@ -42,9 +43,9 @@ end
 
 function ld_api.sample(d,rd,rn)
 	if d.dirty then d:build_alias() end
-	if not rd then 
-		rd = math.random(#d.weights)
-		rn = math.random()
+	if not rd then
+		rd = Random(#d.weights - 1) + 1 -- noita's Random() is [0, n] instead of [1, n]
+		rn = Random()
 	else
 		rd = 1 + math.floor(rd * #d.weights)
 	end
