@@ -7,79 +7,78 @@ DEFAULT_WEIGHTS = {
 	["blood"] = 200,
 
 	-- neutral
-	["alcohol"] = 25, -- whiskey
+	["alcohol"] = 20, -- whiskey
 	["beer"] = 25,
 	-- ["blood_fungi"] = 0, -- evaporates
-	["blood_worm"] = 35,
+	["blood_worm"] = 40,
 	["cement"] = 30,
-	["juhannussima"] = 25,
+	["juhannussima"] = 20,
 	-- ["material_rainbow"] = 0, -- evaporates
 	["milk"] = 35,
-	["molut"] = 25,
-	["pea_soup"] = 20,
+	["molut"] = 20,
+	["pea_soup"] = 35,
 	["peat"] = 30,
-	["sima"] = 25,
-	["slime_green"] = 15,
-	["slime_yellow"] = 15,
-	["slime"] = 15,
+	["sima"] = 20,
+	["slime_green"] = 10,
+	["slime_yellow"] = 10,
+	["slime"] = 10,
 	["slush"] = 35,
 	["swamp"] = 35,
-	["urine"] = 30,
-	["vomit"] = 30,
+	["urine"] = 35,
+	["vomit"] = 35,
 	["water_salt"] = 35,
-	["water_swamp"] = 35,
 
 	-- healing
-	["magic_liquid_hp_regeneration"] = 10,
-	["porridge"] = 15,
+	["magic_liquid_hp_regeneration"] = 3,
+	["porridge"] = 6,
 
 	-- helpful magical liquids
-	["magic_liquid_berserk"] = 25,
+	["magic_liquid_berserk"] = 20,
 	["magic_liquid_charm"] = 15,
 	["magic_liquid_faster_levitation_and_movement"] = 10,
 	["magic_liquid_faster_levitation"] = 15,
 	-- ["magic_liquid_hp_regeneration_unstable"] = 0, -- evaporates
 	["magic_liquid_invisibility"] = 15,
-	["magic_liquid_mana_regeneration"] = 25,
+	["magic_liquid_mana_regeneration"] = 30,
 	["magic_liquid_movement_faster"] = 15,
 	["magic_liquid_protection_all"] = 10,
-	["midas_precursor"] = 30,
-	["midas"] = 15,
+	["midas_precursor"] = 5,
+	["midas"] = 4,
 	["mimic_liquid"] = 15, -- will probably be converted by the time you see it anyway
 
 	-- harmful/neutral magical liquids
 	["magic_liquid_worm_attractor"] = 50,
 	["magic_liquid_weakness"] = 15,
-	["magic_liquid_teleportation"] = 30,
-	["magic_liquid_unstable_teleportation"] = 40,
-	["magic_liquid_unstable_polymorph"] = 40,
-	["magic_liquid_polymorph"] = 30,
-	["magic_liquid_random_polymorph"] = 40,
-	["material_confusion"] = 50,
+	["magic_liquid_teleportation"] = 25,
+	["magic_liquid_unstable_teleportation"] = 45,
+	["magic_liquid_unstable_polymorph"] = 45,
+	["magic_liquid_polymorph"] = 25,
+	["magic_liquid_random_polymorph"] = 30,
+	["material_confusion"] = 45,
 	-- ["magic_liquid"] = 0, -- evaporates
 
 	-- harmful non-magical liquids
-	["acid"] = 15,    -- can anger gods. no worse than vanilla worms
+	["acid"] = 10,    -- can anger gods. no worse than vanilla worms
 	["blood_cold"] = 1, -- evaporates into freezing vapor, quite dangerous
-	["cursed_liquid"] = 25,
-	["liquid_fire_weak"] = 30,
-	["liquid_fire"] = 20,
-	["material_darkness"] = 25,
-	["pus"] = 25,
+	["cursed_liquid"] = 30,
+	["liquid_fire_weak"] = 45,
+	["liquid_fire"] = 35,
+	["material_darkness"] = 35,
+	["pus"] = 35,
 
 	-- molten
 	["aluminium_molten"] = 10,
 	["aluminium_oxide_molten"] = 10,
 	["aluminium_robot_molten"] = 10,
-	["brass_molten"] = 15,
-	["copper_molten"] = 15,
+	["brass_molten"] = 20,
+	["copper_molten"] = 20,
 	["glass_molten"] = 15,
 	["gold_molten"] = 25,
 	["metal_prop_molten"] = 10,
 	["metal_rust_molten"] = 10,
 	["metal_sand_molten"] = 10,
 	["plastic_red_molten"] = 15,
-	["silver_molten"] = 25,
+	["silver_molten"] = 20,
 	["steel_static_molten"] = 10,
 	["steelmoss_static_molten"] = 10,
 	["wax_molten"] = 20,
@@ -110,9 +109,10 @@ UNUSED_MATERIALS = {
 }
 
 -- these materials are pointless duplicates, have errors, or are just weird
+-- materials in this table will not be shown in the options menu regardless of other settings
 IGNORED_MATERIALS = {
 	["blood_fading_slow"] = true,   -- seems pointless with regular blood?
-	["cloth_box2d"] = true, 	    -- missing name string, spams errors with options menu open
+	["cloth_box2d"] = true,         -- missing name string, spams errors with options menu open
 	["gem_box2d_white"] = true,     -- same as above
 	["metal_nohit_molten"] = true,  -- basically a duplicate of metal_prop_molten but for light fixtures?
 	["metal_molten"] = true,        -- same as above, but unused?
@@ -124,10 +124,11 @@ IGNORED_MATERIALS = {
 	["steel_molten"] = true,        -- less interesting version
 	["steel_rust_molten"] = true,   -- less interesting version
 	["water_fading"] = true,        -- evaporable but no evaporable tag (because it doesn't create anything?)
+	["water_swamp"] = true,         -- less interesting version
 	["water_temp"] = true,          -- duplicate of water_fading?
 	["orb_powder"] = true,          -- burns away
 	["creepy_liquid"] = true,       -- just disappears
-	["just_death"] = true,		    -- it would be really funny, but even instant teleport isn't fast enough
-	["void_liquid"] = true, 		-- just disappears
-	["poison"] = true, 				-- evaporates but no tag
+	["just_death"] = true,          -- it would be really funny, but even instant teleport isn't fast enough
+	["void_liquid"] = true,         -- just disappears
+	["poison"] = true,              -- evaporates but no tag
 }
